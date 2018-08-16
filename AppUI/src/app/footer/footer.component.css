@@ -1,0 +1,17 @@
+.footer {
+    clear: both;
+    padding-top: 1%;
+    background: rgb(144, 79, 146);
+  }
+  .fa {
+    float: right;
+    padding: 3px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+    color: white;
+  }
+  
