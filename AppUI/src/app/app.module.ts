@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchService } from './search.service';
 import { SearchComponent } from './search/search.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,7 +19,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

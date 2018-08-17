@@ -1,11 +1,11 @@
-
-<!-- <div class="container">
-  <div class="card" style="width:400px">
-      <img class="card-img-top" src="" alt="Movie image">
-      <div class="card-body">
-        <h4 class="card-title">Movie name1</h4>
-        <p class="card-text">Some example text.</p>
-        <a href="#" class="btn btn-primary">Add Movie</a>
-      </div>
+<div class="card">
+  <div class="card-header">{{movieTitle}}</div>
+  <div *ngFor="let list of movieList" class="card-body">
+    <h2>{{list.movieId}})</h2>
+    <h3>{{list.movieTitle}}</h3>
+    <h3>{{list.movieReleaseYear}}</h3>
+    <h3>{{list.movieRating}}</h3>
+    <p>{{list.movieDesc}}</p>
+    <button (click)="deleteMovie(list.movieId)">Remove</button>
   </div>
- </div> -->
+</div>

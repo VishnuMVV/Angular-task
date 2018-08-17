@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
                    .then(re => this.movies = re.Search);
   }
   ngOnInit() {}
-  addMovie(): void {
-    this.router.navigate(['movie-list']);
+  addMovie(movie: string) {
+    this.omdbService.addMovie(movie);
   }
 }
