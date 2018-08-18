@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -9,13 +10,13 @@ import { SearchService } from '../search.service';
 export class MovieListComponent implements OnInit {
   movieList = [];
   deleteList;
-  constructor(private movieService: SearchService ) { }
+  constructor(private movieService: SearchService , private route: Router) { }
 
   ngOnInit() {
     this.movieService.getWhishList().subscribe(fullList => this.movieList = fullList);
-   }
-  addMovie() { }
-  deleteMovie(id: number) {
+  }
+  deleteMovie(id: string) {
     this.movieService.deleteMovie(id).subscribe(fullList => this.deleteList = fullList);
+    this.route.navigate(['movie-list']);
   }
 }

@@ -1,5 +1,5 @@
 export class MovieDetails {
-     movieId: number;
+     movieId: string;
      movieTitle: string;
      movieRating: number;
      movieDesc: string;

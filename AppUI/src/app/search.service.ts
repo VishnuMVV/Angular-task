@@ -23,10 +23,10 @@ export class SearchService {
     getWhishList(): Observable<MovieDetails[]> {
         return this.http.get<MovieDetails[]>(this.baseUrl + 's');
     }
-    deleteMovie(id: number) {
+    deleteMovie(id: string) {
         return this.http.delete(this.baseUrl + '/' + id);
     }
-    addMovie(movie: string) {
-        return this.http.post(this.baseUrl, movie);
+    addMovie(movie: MovieDetails): Observable<MovieDetails> {
+        return this.http.post<MovieDetails>(this.baseUrl, movie);
     }
 }
